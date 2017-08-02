@@ -22,42 +22,37 @@ public class Log4jTest {
 
                 while (true) {
                     try {
-                        timeToSleep = Math.abs(RANDOM.nextLong() % 6000);
+                        timeToSleep = Math.abs(RANDOM.nextLong() % 7000);
                         Thread.sleep(timeToSleep);
 
-                        switch ((int) (timeToSleep % 13)) {
+                        int modulus = (int) (timeToSleep % 13);
+                        switch (modulus) {
                             case 0:
                             case 1:
                             case 2:
-                                String s = null;
-                                s.length();
+                                UnsafeUtil.getLength(null);
                                 break;
                             case 3:
                             case 4:
                             case 5:
-                                int x = (int) timeToSleep / 0;
+                                UnsafeUtil.getQuotient(modulus, 0);
                                 break;
                             case 6:
                             case 7:
                             case 8:
-                                int[] array = new int[]{0, 1, 2, 3, 4};
-                                int y = array[5];
+                                UnsafeUtil.getElement(modulus);
                                 break;
                             case 9:
                             case 10:
                             case 11:
-                                throw new LoggingAppException("timeToSleep is " + timeToSleep);
+                                UnsafeUtil.throwCustomException("timeToSleep is " + timeToSleep);
                             default:
                                 console.execute();
                                 break;
                         }
 
                     } catch (Exception e) {
-                        String message = e.getMessage();
-                        if(message == null)
-                            message = e.toString();
-
-                        LOGGER.error(message, e);
+                        LOGGER.error("Meaningful specific error message here!", e);
                     }
 
                 }
