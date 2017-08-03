@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.percyvega</groupId>
-    <artifactId>logging-app</artifactId>
+    <artifactId>graylog-logging-app</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -22,6 +22,18 @@
             <groupId>biz.paluch.logging</groupId>
             <artifactId>logstash-gelf</artifactId>
             <version>1.11.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.graylog2</groupId>
+            <artifactId>gelfj</artifactId>
+            <version>1.1.15</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/gelfj-1.1.15.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
         </dependency>
     </dependencies>
 
