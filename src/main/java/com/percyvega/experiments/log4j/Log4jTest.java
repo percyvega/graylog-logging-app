@@ -18,29 +18,28 @@ public class Log4jTest {
             @Override
             public void run() {
 
-                long timeToSleep;
+                long timeToSleep = 0;
 
                 while (true) {
                     try {
                         timeToSleep = Math.abs(RANDOM.nextLong() % 7000);
-                        Thread.sleep(timeToSleep);
 
                         int modulus = (int) (timeToSleep % 13);
                         switch (modulus) {
                             case 0:
                             case 1:
                             case 2:
-                                UnsafeUtil.getLength(null);
+                                UnsafeUtil.obtainLength(null);
                                 break;
                             case 3:
                             case 4:
                             case 5:
-                                UnsafeUtil.getQuotient(modulus, 0);
+                                UnsafeUtil.calculateQuotient(modulus, 0);
                                 break;
                             case 6:
                             case 7:
                             case 8:
-                                UnsafeUtil.getElement(modulus);
+                                UnsafeUtil.retrieveElement(modulus);
                                 break;
                             case 9:
                             case 10:
@@ -53,6 +52,12 @@ public class Log4jTest {
 
                     } catch (Exception e) {
                         LOGGER.error("Meaningful specific error message here!", e);
+                    }
+
+                    try {
+                        Thread.sleep(timeToSleep);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
                     }
 
                 }

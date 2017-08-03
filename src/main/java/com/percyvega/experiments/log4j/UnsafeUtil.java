@@ -1,17 +1,17 @@
 package com.percyvega.experiments.log4j;
 
-public class UnsafeUtil {
+public abstract class UnsafeUtil {
 
-    public static int getElement(int i) {
+    public static int retrieveElement(int i) {
         int[] array = new int[0];
         return array[i];
     }
 
-    public static int getLength(String s) {
+    public static int obtainLength(String s) {
         return s.length();
     }
 
-    public static int getQuotient(int dividend, int divisor) {
+    public static int calculateQuotient(int dividend, int divisor) {
         return dividend / divisor;
     }
 
