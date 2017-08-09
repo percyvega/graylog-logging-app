@@ -1,6 +1,6 @@
-package com.percyvega.experiments.util.log4j;
+package com.percyvega.experiments.logging.util;
 
-import com.percyvega.experiments.exception.log4j.CustomException;
+import com.percyvega.experiments.logging.exception.CustomException;
 
 public abstract class UnsafeUtil {
 

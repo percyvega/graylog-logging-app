@@ -5,7 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.percyvega</groupId>
-    <artifactId>graylog-logging-app</artifactId>
+    <!--<artifactId>graylog-log4j-app</artifactId>-->
+    <artifactId>graylog-logback-app</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -13,41 +14,17 @@
     </properties>
 
     <dependencies>
-        <!-- log4j: -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.25</version>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
-        <!-- :log4j -->
-
-        <!-- logback: -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
-        </dependency>
         <!--<dependency>-->
             <!--<groupId>org.slf4j</groupId>-->
-            <!--<artifactId>slf4j-simple</artifactId>-->
-            <!--<version>1.7.25</version>-->
+            <!--<artifactId>slf4j-log4j12</artifactId>-->
+            <!--<version>1.7.12</version>-->
         <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>ch.qos.logback</groupId>-->
-            <!--<artifactId>logback-classic</artifactId>-->
-            <!--<version>1.2.3</version>-->
-        <!--</dependency>-->
+
         <dependency>
             <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
+            <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
         </dependency>
-        <!-- :logback -->
 
         <dependency>
             <groupId>biz.paluch.logging</groupId>

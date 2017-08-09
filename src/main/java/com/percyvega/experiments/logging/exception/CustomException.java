@@ -1,4 +1,4 @@
-package com.percyvega.experiments.exception.log4j;
+package com.percyvega.experiments.logging.exception;
 
 public class CustomException extends RuntimeException {
 

@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE configuration>
-
 <configuration>
     <contextName>test</contextName>
     <jmxConfigurator/>
 
     <appender name="gelf" class="biz.paluch.logging.gelf.logback.GelfLogbackAppender">
-        <host>udp:localhost</host>
+        <host>udp:127.0.0.1</host>
         <port>12206</port>
-        <version>1.0</version>
+        <version>1.1</version>
         <facility>java-test</facility>
         <extractStackTrace>true</extractStackTrace>
         <filterStackTrace>true</filterStackTrace>
-        <timestampPattern>yyyy-MM-dd HH:mm:ss,SSS</timestampPattern>
+        <timestampPattern>yyyy-MM-dd HH:mm:ss.SSS</timestampPattern>
         <maximumMessageSize>8192</maximumMessageSize>
+
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>DEBUG</level>
         </filter>
